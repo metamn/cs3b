@@ -1,0 +1,5 @@
+@mixin logo($size: $gutter*4) {
+  @include circle($size);
+  @include color($background, $color);
+  @include i-c($size);
+}

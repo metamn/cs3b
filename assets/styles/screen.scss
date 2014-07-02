@@ -6,6 +6,12 @@
 @import "compass/reset";
 @import "compass/css3";
 
+$gutter: 1.25em;
+@import "atoms/*";
+@import "molecules/*";
+@import "organisms/*";
+@import "structures";
+@import "pages";
 
 //@import "visual-grid";
 //#grid, #gravity { display: none; }

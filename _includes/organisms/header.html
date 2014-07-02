@@ -1,0 +1,6 @@
+<header>
+  {% capture logo %}
+    {% include molecules/logo.html %}
+  {% endcapture %}
+  {% include atoms/link.html url=site.url title=site.title text=logo %}
+</header>

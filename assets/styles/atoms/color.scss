@@ -1,0 +1,8 @@
+$background: #fff;
+$color: #000;
+
+
+@mixin color($fore: $color, $back: $background) {
+  color: $fore;
+  background: $back;
+}
