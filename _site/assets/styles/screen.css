@@ -16,8 +16,16 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-html body header #logo { width: 5em; height: 5em; -moz-border-radius: 5em; -webkit-border-radius: 5em; border-radius: 5em; color: white; background: black; }
-html body header #logo span { display: inline-block; margin-top: calc(2.5em - 0.625em); }
+html body header { margin: 1.25em; position: relative; }
+html body header #logo, html body header img, html body header h1 { float: left; width: auto; }
+html body header img { width: 12.5em; }
+html body header h1 { margin-left: 12.5em; }
+html body header #logo { width: 12.5em; height: 12.5em; -moz-border-radius: 12.5em; -webkit-border-radius: 12.5em; border-radius: 12.5em; color: white; background: black; }
+html body header #logo span { display: inline-block; margin-top: calc(6.25em - 0.625em); }
 html body header #logo span:nth-of-type(1) { float: left; margin-left: 0.625em; }
-html body header #logo span:nth-of-type(1):after { content: ''; display: inline-block; border-bottom: 1px solid; width: calc(5em - 2.5em); position: relative; top: -0.3125em; left: 0.15625em; }
+html body header #logo span:nth-of-type(1):after { content: ''; display: inline-block; border-bottom: 1px solid; width: calc(12.5em - 2.5em); position: relative; top: -0.3125em; left: 0.15625em; }
 html body header #logo span:nth-of-type(2) { float: right; margin-right: 0.625em; }
+html body header #logo, html body header img { position: absolute; left: 0; }
+html body header h1, html body header img { display: none; }
+html body header:hover #logo { display: none; }
+html body header:hover img, html body header:hover h1 { display: block; }

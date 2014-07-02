@@ -1,5 +1,46 @@
 @mixin header {
+  margin: $gutter;
+  $size: $gutter * 10;
+  
+  // Align elements
+  #logo, img, h1 {
+    float: left;
+    width: auto;
+  }
+  
+  img {
+    width: $size;
+  }
+  
+  h1 {
+    margin-left: $size;
+  }
+  
+  
+  // Set up elements
   #logo {
-    @include logo;
+    @include logo($size);
+  }
+
+  // Overlap elements
+  position: relative;
+  #logo, img {
+    position: absolute;
+    left: 0;
+  }
+  
+  h1, img {
+    display: none;
+  }
+  
+  // Toggle elements on hover
+  &:hover {
+    #logo {
+      display: none;
+    }
+    
+    img, h1 {
+      display: block;
+    }
   }
 }
