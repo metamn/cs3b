@@ -7,28 +7,26 @@
     <title>it's csongor</title> 
     
     <!-- Compass with SASS -->
-  	<link href="/assets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  	<link href="/assets/styles/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     
+    <!-- IE 9 -->
     <!--[if lt IE 9]>
-        <link href="/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
+    <link href="/assets/styles/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
 
-    <!--[if lt IE 9]>
-      <script src="/assets/html5shiv.js"></script>
-    <![endif]-->
-    <!--[if (lt IE 9) & (!IEMobile)]>
-    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-    
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic,400italic,700italic|Old+Standard+TT:700,400,400italic' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+  <script src="/assets/scripts/html5shiv.js"></script>
+<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
     
     <!-- Picturefill Responsive Images -->
-    <script type="text/javascript" src="/assets/matchmedia.js"></script>
-    <script type="text/javascript" src="/assets/picturefill.js"></script>
+    <script type="text/javascript" src="/assets/scripts/matchmedia.js"></script>
+    <script type="text/javascript" src="/assets/scripts/picturefill.js"></script>
   </head>
   
-  <body class="it's-csongor frontpage">
+  <body class="its-csongor default">
     <div class="container">
     
     
@@ -36,18 +34,17 @@
 
 
 
-</div>
+</div> <!-- for .container -->
 
 <!-- jQuery from CDN and local fallback -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('/assets/jquery-1.10.2.min.js">\x3C/script>')</script>
+<script>window.jQuery || document.write('/assets/scripts/jquery-1.10.2.min.js">\x3C/script>')</script>
 
 <!-- Site specific scripts  -->
-<script src="/assets/jquery.init.js"></script>
+<script src="/assets/scripts/jquery.init.js"></script>
 
-
-
-<script type="text/javascript" src="/assets/jquery.visual.grid.js"></script>
+<!-- The visual grid helper -->
+<script type="text/javascript" src="/assets/scripts/jquery.visual.grid.js"></script>
 
 </body>
 </html>

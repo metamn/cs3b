@@ -7,28 +7,17 @@
     <title>{{ page.title | strip_html }}</title> 
     
     <!-- Compass with SASS -->
-  	<link href="{{ site.url }}/assets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  	<link href="{{ site.url }}/assets/styles/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     
-    <!--[if lt IE 9]>
-        <link href="{{ site.url }}/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-      <script src="{{ site.url }}/assets/html5shiv.js"></script>
-    <![endif]-->
-    <!--[if (lt IE 9) & (!IEMobile)]>
-    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-    
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic,400italic,700italic|Old+Standard+TT:700,400,400italic' rel='stylesheet' type='text/css'>
+    <!-- IE 9 -->
+    {% include ie.html %}
     
     <!-- Picturefill Responsive Images -->
-    <script type="text/javascript" src="{{ site.url }}/assets/matchmedia.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/assets/picturefill.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/scripts/matchmedia.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/scripts/picturefill.js"></script>
   </head>
   
-  <body class="{{ page.title | downcase | remove:',' | remove:'&' | replace:' ', '-' }} {{ page.layout }}">
+  <body class="{{ page.title | downcase | remove:',' | remove:'&' | remove:"'" | remove: '"' | replace:' ', '-' }} {{ page.layout }}">
     <div class="container">
     
     
