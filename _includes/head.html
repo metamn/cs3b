@@ -9,10 +9,6 @@
     <!-- Compass with SASS -->
   	<link href="{{ site.url }}/assets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     
-    {% if page.url == "/smuff" %}
-      <link href="{{ site.url }}/assets/smuff-logo.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    {% endif %}
-    
     <!--[if lt IE 9]>
         <link href="{{ site.url }}/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -30,8 +26,6 @@
     <!-- Picturefill Responsive Images -->
     <script type="text/javascript" src="{{ site.url }}/assets/matchmedia.js"></script>
     <script type="text/javascript" src="{{ site.url }}/assets/picturefill.js"></script>
-    
-    {% include icons.html %}
   </head>
   
   <body class="{{ page.title | downcase | remove:',' | remove:'&' | replace:' ', '-' }} {{ page.layout }}">
