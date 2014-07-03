@@ -6,6 +6,10 @@ html {
       @include header;
     }
     
+    #menu {
+      @include menu;
+    }
+    
     #strapline {
       @include strapline;
     }

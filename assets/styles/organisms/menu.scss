@@ -1,0 +1,14 @@
+@mixin menu {
+  width: auto;
+  
+  position: absolute;
+  top: row(2) - $gutter*2 + $gutter/2;
+  left: col(6);
+  
+  @include link($color);
+  @include font(menu);
+  
+  ul {
+    @include list-inline;
+  }
+}

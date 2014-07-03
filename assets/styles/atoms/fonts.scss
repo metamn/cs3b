@@ -20,11 +20,24 @@ $heading-level-3: 4.2308em;
   
   } @elseif ($type == strapline-product) {
     @include font-strapline-product;
+  
+  } @elseif ($type == menu) {
+    @include font-menu;
+  
+  } @elseif ($type == csongor) {
+    @include font-csongor;
   } 
 }
 
 
+@mixin font-csongor {
+  font-family: serif;
+  font-style: italic;
+}
 
+@mixin font-menu {
+  font-family: $sans-serif;
+}
 
 @mixin font-strapline {
   font-family: $sans-serif;

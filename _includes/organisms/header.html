@@ -9,8 +9,10 @@
   {% endcapture %}
   {% include atoms/link.html url=site.url title=site.title text=avatar %}
   
-  {% capture h1 %}
-    <h1>{{ site.title }}</h1>
-  {% endcapture %}
-  {% include atoms/link.html url=site.url title=site.title text=h1 %}
+  <h1>
+    {% capture h1 %}
+      {{ site.title }}
+    {% endcapture %}
+    {% include atoms/link.html url=site.url title=site.title text=h1 %}
+  </h1>
 </header>

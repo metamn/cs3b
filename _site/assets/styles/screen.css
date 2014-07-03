@@ -21,7 +21,7 @@ html body { font-size: 100%; line-height: 1.25; }
 @media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
 @media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
 
-section h3 { display: none; }
+section h3, nav h3 { display: none; }
 
 html body { font-size: 100%; line-height: 1.25; }
 @media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
@@ -40,9 +40,15 @@ html body header #logo span { display: inline-block; margin-top: calc(5em - 0.62
 html body header #logo span:nth-of-type(1) { float: left; margin-left: 0.625em; }
 html body header #logo span:nth-of-type(1):after { content: ''; display: inline-block; border-bottom: 1px solid; width: calc(10em - 2.5em); position: relative; top: -0.3125em; left: 0.15625em; }
 html body header #logo span:nth-of-type(2) { float: right; margin-right: 0.625em; }
+html body header h1 { font-family: serif; font-style: italic; }
+html body header h1 a, html body header h1 a:visited { color: #66493d; background: transparent; text-decoration: none; }
 html body header:hover #logo { display: none; }
 html body header:hover img, html body header:hover h1 { display: block; }
-html body #strapline { color: #999999; background: black; }
+html body #menu { width: auto; position: absolute; top: 10.625em; left: 38.75em; font-family: "Lato", sans-serif; }
+html body #menu a, html body #menu a:visited { color: black; background: transparent; text-decoration: none; }
+html body #menu ul li { display: inline-block; float: left; margin-right: 1.25em; }
+html body #menu ul li:last-of-type { margin-right: 0; }
+html body #strapline { width: 100%; float: left; color: #999999; background: black; }
 html body #strapline article { position: relative; top: 12.5em; left: 19.375em; }
 html body #strapline article h1 { font-family: "Lato", sans-serif; font-weight: 300; font-size: 2.6154em; max-width: 15.625em; }
 html body #strapline article h1 span { display: inline-block; }

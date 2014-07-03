@@ -13,6 +13,11 @@
   #logo {
     @include logo($size);
   }
+  
+  h1 {
+    @include font-csongor;
+    @include link($highlight, transparent);
+  }
 
   // Toggle elements on hover
   &:hover {
