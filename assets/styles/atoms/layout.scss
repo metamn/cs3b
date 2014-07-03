@@ -9,3 +9,8 @@
 section h3 {
   display: none;
 }
+
+@mixin block {
+  width: 100%;
+  float: left;
+}

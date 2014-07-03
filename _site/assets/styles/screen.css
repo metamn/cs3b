@@ -29,7 +29,7 @@ html body { font-size: 100%; line-height: 1.25; }
 
 html, body, .container, .container section { height: 100%; position: relative; }
 
-html body header { position: absolute; z-index: 1; top: 6.25em; left: 6.45833em; position: relative; }
+html body header { position: absolute; z-index: 1; top: 6.25em; left: 6.45833em; height: 12.5em; position: relative; }
 html body header #logo, html body header img, html body header h1 { float: left; width: auto; }
 html body header img { width: 10em; }
 html body header h1 { margin-left: 10em; }
@@ -43,13 +43,13 @@ html body header #logo span:nth-of-type(2) { float: right; margin-right: 0.625em
 html body header:hover #logo { display: none; }
 html body header:hover img, html body header:hover h1 { display: block; }
 html body #strapline { color: #999999; background: black; }
-html body #strapline article { position: relative; top: 18.75em; left: 19.375em; }
+html body #strapline article { position: relative; top: 12.5em; left: 19.375em; }
 html body #strapline article h1 { font-family: "Lato", sans-serif; font-weight: 300; font-size: 2.6154em; max-width: 15.625em; }
 html body #strapline article h1 span { display: inline-block; }
 html body #strapline article h1 span:nth-of-type(2), html body #strapline article h1 span:nth-of-type(5) { color: #66493d; }
 html body #strapline article h1 span:nth-of-type(2):before, html body #strapline article h1 span:nth-of-type(5):before { content: 'experiences'; color: transparent; border-top: 1px solid #66493d; position: relative; top: 0.78125em; margin-right: 0.15625em; }
-html body #strapline article h1 span:nth-of-type(3) { width: 100%; float: left; }
-html body #strapline article h1 span:nth-of-type(6) { font-family: "Old Standard TT", serif; font-weight: normal; font-style: italic; color: #66493d; margin-top: 1.25em; }
+html body #strapline article h1 span:nth-of-type(5) { width: 6.45833em; }
+html body #strapline article h1 span:nth-of-type(6) { width: 100%; float: left; font-family: "Old Standard TT", serif; font-weight: normal; font-style: italic; font-size: smaller; color: #4c4c4c; margin-top: 1.25em; }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }

@@ -3,7 +3,7 @@
   
   article {
     position: relative;
-    top: row(3);
+    top: row(2);
     left: col(3);
     
     h1 {
@@ -15,7 +15,7 @@
         
         &:nth-of-type(2), &:nth-of-type(5) {
           color: $highlight;
-          
+  
           &:before {
             content: 'experiences';
             color: transparent;
@@ -27,14 +27,13 @@
           }
         }
 
-        &:nth-of-type(3) {
-          width: 100%;
-          float: left;
-        }
+        &:nth-of-type(5) {
+          width: col(1);
+        } 
 
         &:nth-of-type(6) {
+          @include block;
           @include font(strapline-product);
-          color: $highlight;
           margin-top: $gutter;
         }
       }

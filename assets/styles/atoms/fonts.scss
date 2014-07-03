@@ -1,8 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,300italic|Old+Standard+TT:400,400italic);
 
+// Font familes
 $serif: 'Old Standard TT', serif;
 $sans-serif: 'Lato', sans-serif;
 
+
+// Heading sizes
+// - based on lamb.cc/typography using Fibonacci numbers
+$heading-level-1: 1.6154em;
+$heading-level-2: 2.6154em;
+$heading-level-3: 4.2308em;
+
+
+
+// Mixins
 @mixin font($type: body) {
   @if ($type == strapline) {
     @include font-strapline;
@@ -25,4 +36,6 @@ $sans-serif: 'Lato', sans-serif;
   font-family: $serif;
   font-weight: normal;
   font-style: italic;
+  font-size: smaller;
+  color: $dark-grey;
 }

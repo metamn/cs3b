@@ -5,6 +5,7 @@
   z-index: 1;
   top: row(1);
   left: col(1);
+  height: row(2);
   
   @include align-header($size);
   
