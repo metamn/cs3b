@@ -1,0 +1,44 @@
+@mixin strapline {
+  @include color($background, $color);
+  
+  article {
+    position: relative;
+    top: $minor;
+    left: $minor/2;
+    
+    @include font(strapline);
+    
+    h1 {
+      width: 16em;
+      
+      span {
+        display: inline-block;
+        
+        &:nth-of-type(2), &:nth-of-type(5) {
+          color: $highlight;
+          
+          &:before {
+            content: 'experiences';
+            color: transparent;
+            border-top: 1px solid $highlight;
+            
+            position: relative;
+            top: $gutter/2 + $gutter/8;
+            margin-right: $gutter/8;
+          }
+        }
+
+        &:nth-of-type(3) {
+          width: 100%;
+          float: left;
+        }
+
+        &:nth-of-type(6) {
+          @include font(strapline-product);
+          color: $highlight;
+          margin-top: $gutter;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+$major: 100% / 1.618;
+$minor: 100% - $major;
+
+
+@mixin full-screen {
+  html, body, .container, section {
+    height: 100%;
+    position: relative;
+  }
+}
+
+section h3 {
+  display: none;
+}

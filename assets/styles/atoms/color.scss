@@ -1,6 +1,6 @@
-$background: #fff;
 $color: #000;
-
+$background: #999;
+$highlight: #66493D;
 
 @mixin color($fore: $color, $back: $background) {
   color: $fore;

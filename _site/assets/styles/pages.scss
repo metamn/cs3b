@@ -1,7 +1,13 @@
+@include full-screen;
+
 html {
   body {
     header {
       @include header;
+    }
+    
+    #strapline {
+      @include strapline;
     }
   }
 }
