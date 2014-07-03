@@ -6,12 +6,20 @@
 @import "compass/reset";
 @import "compass/css3";
 
-$gutter: 1.25em;
+@import "atoms/typographic-grid";
 @import "atoms/*";
 @import "molecules/*";
 @import "organisms/*";
 @import "structures";
 @import "pages";
 
-//@import "visual-grid";
-//#grid, #gravity { display: none; }
+@import "visual-grid";
+
+#grid {
+  z-index: 100;
+  
+  .col {
+    color: #fff;
+  }
+}
+#grid, #gravity { display: none; }

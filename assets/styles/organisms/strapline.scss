@@ -3,13 +3,12 @@
   
   article {
     position: relative;
-    top: $minor;
-    left: $minor/2;
-    
-    @include font(strapline);
+    top: row(3);
+    left: col(3);
     
     h1 {
-      width: 16em;
+      @include font(strapline);
+      max-width: $text-width/2;
       
       span {
         display: inline-block;

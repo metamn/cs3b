@@ -17,28 +17,57 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
+html body { font-size: 100%; line-height: 1.25; }
+@media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
+@media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
+
 section h3 { display: none; }
 
-html, body, .container, section { height: 100%; position: relative; }
+html body { font-size: 100%; line-height: 1.25; }
+@media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
+@media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
 
-html body header { position: absolute; z-index: 1; top: 3.75em; left: 3.75em; position: relative; }
+html, body, .container, .container section { height: 100%; position: relative; }
+
+html body header { position: absolute; z-index: 1; top: 6.25em; left: 6.45833em; position: relative; }
 html body header #logo, html body header img, html body header h1 { float: left; width: auto; }
-html body header img { width: 12.5em; }
-html body header h1 { margin-left: 12.5em; }
+html body header img { width: 10em; }
+html body header h1 { margin-left: 10em; }
 html body header #logo, html body header img { position: absolute; left: 0; }
 html body header h1, html body header img { display: none; }
-html body header #logo { width: 12.5em; height: 12.5em; -moz-border-radius: 12.5em; -webkit-border-radius: 12.5em; border-radius: 12.5em; color: #999999; background: #66493d; }
-html body header #logo span { display: inline-block; margin-top: calc(6.25em - 0.625em); }
+html body header #logo { width: 10em; height: 10em; -moz-border-radius: 10em; -webkit-border-radius: 10em; border-radius: 10em; color: #999999; background: #66493d; }
+html body header #logo span { display: inline-block; margin-top: calc(5em - 0.625em); }
 html body header #logo span:nth-of-type(1) { float: left; margin-left: 0.625em; }
-html body header #logo span:nth-of-type(1):after { content: ''; display: inline-block; border-bottom: 1px solid; width: calc(12.5em - 2.5em); position: relative; top: -0.3125em; left: 0.15625em; }
+html body header #logo span:nth-of-type(1):after { content: ''; display: inline-block; border-bottom: 1px solid; width: calc(10em - 2.5em); position: relative; top: -0.3125em; left: 0.15625em; }
 html body header #logo span:nth-of-type(2) { float: right; margin-right: 0.625em; }
 html body header:hover #logo { display: none; }
 html body header:hover img, html body header:hover h1 { display: block; }
 html body #strapline { color: #999999; background: black; }
-html body #strapline article { position: relative; top: 38.1953%; left: 19.09765%; font-family: "Lato", sans-serif; font-weight: 300; font-size: 300%; line-height: 1.25; }
-html body #strapline article h1 { width: 16em; }
+html body #strapline article { position: relative; top: 18.75em; left: 19.375em; }
+html body #strapline article h1 { font-family: "Lato", sans-serif; font-weight: 300; font-size: 2.6154em; max-width: 15.625em; }
 html body #strapline article h1 span { display: inline-block; }
 html body #strapline article h1 span:nth-of-type(2), html body #strapline article h1 span:nth-of-type(5) { color: #66493d; }
 html body #strapline article h1 span:nth-of-type(2):before, html body #strapline article h1 span:nth-of-type(5):before { content: 'experiences'; color: transparent; border-top: 1px solid #66493d; position: relative; top: 0.78125em; margin-right: 0.15625em; }
 html body #strapline article h1 span:nth-of-type(3) { width: 100%; float: left; }
 html body #strapline article h1 span:nth-of-type(6) { font-family: "Old Standard TT", serif; font-weight: normal; font-style: italic; color: #66493d; margin-top: 1.25em; }
+
+#gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
+#gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }
+#gravity .h-horizontal { top: calc(50% - 1px); width: 100%; border-bottom: 1px solid red; }
+#gravity .h-golden-rectangle { border: 1px solid green; opacity: .8; }
+#gravity .h-gravity-point { position: absolute; z-index: 1000; opacity: .3; display: none; }
+#gravity .h-gravity-point:after { content: ''; display: block; width: 1.25em; height: 1.25em; background: red; position: relative; top: -0.625em; left: -0.625em; }
+#gravity .h-gravity-point:last-of-type { display: block; }
+
+#grid { position: absolute; top: 0; opacity: .1; z-index: -1; }
+
+#grid .col { border-right: 1px solid; border-bottom: 1px solid; width: calc(5.20833em + 1.25em - 1px); height: calc(5em + 1.25em - 1px); float: left; }
+
+#grid .gutter-right { float: right; border-left: 1px solid; width: calc(1.25em - 1px); height: 100%; }
+
+#grid .gutter-bottom { float: left; border-bottom: 1px solid; height: calc(1.25em - 1px); width: 100%; }
+
+#grid { z-index: 100; }
+#grid .col { color: #fff; }
+
+#grid, #gravity { display: none; }
