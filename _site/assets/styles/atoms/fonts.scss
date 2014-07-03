@@ -33,9 +33,6 @@ $heading-level-3: 4.2308em;
 }
 
 @mixin font-strapline-product {
-  font-family: $serif;
-  font-weight: normal;
-  font-style: italic;
-  font-size: smaller;
-  color: $dark-grey;
+  font-size: $heading-level-1;
+  color: $product;
 }

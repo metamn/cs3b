@@ -24,17 +24,18 @@
             position: relative;
             top: $gutter/2 + $gutter/8;
             margin-right: $gutter/8;
+            display: inline-block;
           }
         }
 
         &:nth-of-type(5) {
-          width: col(1);
+          &:before {
+            width: col(0.5);
+  }
         } 
 
         &:nth-of-type(6) {
-          @include block;
           @include font(strapline-product);
-          margin-top: $gutter;
         }
       }
     }
