@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,300italic|Old+Standard+TT:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400|Old+Standard+TT:400italic);
 
 // Font familes
 $serif: 'Old Standard TT', serif;
@@ -18,9 +18,6 @@ $heading-level-3: 4.2308em;
   @if ($type == strapline) {
     @include font-strapline;
   
-  } @elseif ($type == strapline-product) {
-    @include font-strapline-product;
-  
   } @elseif ($type == menu) {
     @include font-menu;
   
@@ -31,7 +28,7 @@ $heading-level-3: 4.2308em;
 
 
 @mixin font-csongor {
-  font-family: serif;
+  font-family: $serif;
   font-style: italic;
 }
 
@@ -43,9 +40,4 @@ $heading-level-3: 4.2308em;
   font-family: $sans-serif;
   font-weight: 300;
   font-size: $heading-level-2;
-}
-
-@mixin font-strapline-product {
-  font-size: $heading-level-1;
-  color: $product;
 }

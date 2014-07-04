@@ -1,5 +1,5 @@
 /* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,300italic|Old+Standard+TT:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400|Old+Standard+TT:400italic);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
 html { line-height: 1; }
@@ -40,11 +40,11 @@ html body header #logo span { display: inline-block; margin-top: calc(5em - 0.62
 html body header #logo span:nth-of-type(1) { float: left; margin-left: 0.625em; }
 html body header #logo span:nth-of-type(1):after { content: ''; display: inline-block; border-bottom: 1px solid; width: calc(10em - 2.5em); position: relative; top: -0.3125em; left: 0.15625em; }
 html body header #logo span:nth-of-type(2) { float: right; margin-right: 0.625em; }
-html body header h1 { font-family: serif; font-style: italic; }
+html body header h1 { font-family: "Old Standard TT", serif; font-style: italic; }
 html body header h1 a, html body header h1 a:visited { color: #66493d; background: transparent; text-decoration: none; }
 html body header:hover #logo { display: none; }
 html body header:hover img, html body header:hover h1 { display: block; }
-html body #menu { width: auto; position: absolute; top: 10.625em; left: 38.75em; font-family: "Lato", sans-serif; }
+html body #menu { width: auto; position: absolute; top: 10.625em; left: 38.75em; font-family: "Lato", sans-serif; display: none; }
 html body #menu a, html body #menu a:visited { color: black; background: transparent; text-decoration: none; }
 html body #menu ul li { display: inline-block; float: left; margin-right: 1.25em; }
 html body #menu ul li:last-of-type { margin-right: 0; }
@@ -55,7 +55,6 @@ html body #strapline article h1 span { display: inline-block; }
 html body #strapline article h1 span:nth-of-type(2), html body #strapline article h1 span:nth-of-type(5) { color: #66493d; }
 html body #strapline article h1 span:nth-of-type(2):before, html body #strapline article h1 span:nth-of-type(5):before { content: 'experiences'; color: transparent; border-top: 1px solid #66493d; position: relative; top: 0.78125em; margin-right: 0.15625em; display: inline-block; }
 html body #strapline article h1 span:nth-of-type(5):before { width: 3.22917em; }
-html body #strapline article h1 span:nth-of-type(6) { font-size: 1.6154em; color: #263326; }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }
