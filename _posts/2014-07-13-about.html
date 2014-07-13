@@ -1,0 +1,50 @@
+---
+title: About
+layout: default
+companies:
+  - logo: occrp.png
+    title: Organized Crime and Corruption Reporting Project
+  - logo: reboot.png
+    title: Reboot
+  - logo: anvelocom.png
+    title: Anvelocom
+  - logo: scatter.png
+    title: Scatter
+  - logo: ttf.png
+    title: Open Society Institute's Think Tank Fund 
+  - logo: smuff.png
+    title: Smuff
+  - logo: inu.png
+    title: Inu Chivu, photographer
+  - logo: ceu.png
+    title: Central European University, Department of Political Science
+  - logo: shopify.png
+    title: Shopify
+  - logo: languagelap.png
+    title: Languagelab
+---
+
+
+{% capture c %}
+  <p>
+    Csongor is a web designer and developer with great product skills.
+  </p>
+  
+  <p>
+    In the past he designed experiences and developed engagement for companies like:
+  </p>
+  
+  <ul>
+    {% for company in page.companies %}
+      <li>
+        {% include atoms/svg.html png=company.logo title=company.title %}
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <p>
+    {% include atoms/link.html url="mailto:bartus.csongor@gmail.com" title="bartus.csongor@gmail.com" text="Contact Csongor for your next project" %}
+  </p>
+{% endcapture %}
+
+{% include organisms/article.html content=c %}

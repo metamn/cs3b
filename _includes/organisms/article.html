@@ -1,0 +1,7 @@
+<article id="{{ page.title | downcase | remove:',' | remove:'&' | remove:"'" | remove: '"' | replace:' ', '-' }}">
+  <h3>
+    {% include atoms/link.html url=page.url title=page.title text=page.title %}
+  </h3>
+  
+  {{ include.content }}
+</article>
