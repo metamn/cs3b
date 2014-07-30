@@ -1,2 +1,3 @@
-Csongor knows how to tell stories on the web, and, how to make them work.
-He offers consulting, design, development, deployment and optimization services for international companies and organizations.
+ Reboot is a social impact firm dedicated to inclusive development and accountable governance. They help governments, foundations, and international organizations achieve their missions.
+
+We've enhanced their Wordpress content management system to support storytelling. 
