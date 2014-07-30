@@ -1,0 +1,9 @@
+@mixin text {
+  max-width: $text-width;
+  
+  @include font(body);
+  
+  p {
+    @include p;
+  }
+}

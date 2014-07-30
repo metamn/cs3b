@@ -1,29 +1,8 @@
 
-@mixin full-screen {
-  html, body, .container, .container section {
-    height: 100%;
-    position: relative;
+@mixin hide-title {
+  > h3 {
+    display: none;
   }
-}
-
-
-// General mixins
-
-
-@mixin list-inline($margin: $gutter) {
-  li {
-    display: inline-block;
-    float: left;
-    margin-right: $margin;
-    
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-}
-
-section h3, nav h3 {
-  display: none;
 }
 
 @mixin block {

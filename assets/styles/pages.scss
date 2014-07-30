@@ -1,0 +1,14 @@
+html {
+  body {
+    @include typographic-grid;
+    @include color;
+    
+    .container {
+      @include container;
+    
+      #intro {
+        @include intro;
+      }
+    }
+  }
+}

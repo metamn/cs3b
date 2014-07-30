@@ -1,8 +1,6 @@
-$color: #000;
-$background: #999;
-$highlight: #66493D;
-$product: #263326;
-$dark-grey: #4c4c4c;
+$background: white;
+$color: hsla(170, 5%, 5%, 1);
+$highlight: hsla(3, 65%, 45%, 1);
 
 
 @mixin color($fore: $color, $back: $background) {

@@ -1,0 +1,10 @@
+@mixin container {
+  @include block;
+  margin: row(1) col(1);
+  width: calc(100% - #{col(2)});
+
+  @include mobile {
+    margin: row(1) $gutter;
+    width: calc(100% - #{$gutter * 2});
+  }
+}

@@ -1,0 +1,11 @@
+@mixin about {
+  @include hide-title;
+  
+  @include text;
+  font-size: $heading-level-1;
+  
+  span {
+    font-style: italic;
+    @include color($highlight);
+  }
+}

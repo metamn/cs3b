@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400|Old+Standard+TT:400italic);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic);
 
 // Font familes
-$serif: 'Old Standard TT', serif;
+$serif: 'Vollkorn', serif;
 $sans-serif: 'Lato', sans-serif;
 
 
@@ -15,8 +15,8 @@ $heading-level-3: 4.2308em;
 
 // Mixins
 @mixin font($type: body) {
-  @if ($type == strapline) {
-    @include font-strapline;
+  @if ($type == body) {
+    @include font-body;
   
   } @elseif ($type == menu) {
     @include font-menu;
@@ -27,17 +27,6 @@ $heading-level-3: 4.2308em;
 }
 
 
-@mixin font-csongor {
+@mixin font-body {
   font-family: $serif;
-  font-style: italic;
-}
-
-@mixin font-menu {
-  font-family: $sans-serif;
-}
-
-@mixin font-strapline {
-  font-family: $sans-serif;
-  font-weight: 300;
-  font-size: $heading-level-2;
 }
