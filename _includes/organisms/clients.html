@@ -1,0 +1,8 @@
+<article id="" class="client">
+  <h3>{{ post.title }}</h3>
+  
+  {{ post.content }}
+  
+  {% include molecules/services.html title="Services" collection=post.services %}
+  {% include molecules/services.html title="Technologies" collection=post.technologies %}
+</article>

@@ -1,0 +1,9 @@
+<aside class="{{ include.title }}">
+  <h3>{{ include.title }}</h3>
+
+  <ul>
+    {% for item in include.collection %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</aside>

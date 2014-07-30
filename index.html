@@ -4,3 +4,24 @@ title: Csongor Bartus
 ---
 
 
+<article id="about">
+  <h3>About</h3>
+  
+  <p>
+    Csongor knows how to tell stories on the web, and, how to make them work.
+  </p>
+  
+  <p>
+    He offers consulting, design, development, deployment and optimization services for international companies and organizations.
+  </p>
+</article>
+
+<section id="clients">
+  <h3>Clients</h3>
+  
+  {% for post in site.categories.clients %}
+    {% include organisms/clients.html %}
+  {% endfor %}
+</section>
+
+
