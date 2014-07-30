@@ -19,7 +19,7 @@ title: Csongor Bartus
 <section id="clients">
   <h3>Clients</h3>
   
-  {% for post in site.categories.clients %}
+  {% for post in site.categories.clients reversed %}
     {% include organisms/clients.html %}
   {% endfor %}
 </section>
