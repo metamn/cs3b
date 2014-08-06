@@ -1,0 +1,36 @@
+@mixin intro {
+  @include hide-title;
+  background: lightgrey;
+  
+  article {
+    padding: row(1) 0 0;
+    
+    h1 {
+      @include center;
+      position: relative;
+      max-width: $text-width / 2;
+      
+      font-family: 'Vollkorn', serif;
+      font-size: $heading-level-2;
+    }
+    
+    nav {
+      padding: $gutter 0;
+      
+      h3 {
+        @include center(horizontal);
+        position: relative;
+      }
+    }
+    
+    figure {
+      @include center(horizontal);
+      position: relative;
+      top: $gutter*2;
+      
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

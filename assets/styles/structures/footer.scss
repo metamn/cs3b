@@ -1,0 +1,10 @@
+@mixin footer {
+  padding: row(1) 0 $gutter;
+  
+  @include center(horizontal);
+  position: relative;
+  
+  ul {
+    padding-top: $gutter;
+  }
+}

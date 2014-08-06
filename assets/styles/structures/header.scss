@@ -1,0 +1,14 @@
+@mixin header {
+  padding: $gutter*2 0;
+  
+  h1 {
+    width: $text-width;
+    display: inline-block;
+    
+    @include center(horizontal);
+    position: relative;
+    
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: $heading-level-1;
+  }
+}

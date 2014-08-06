@@ -3,12 +3,16 @@ html {
     @include typographic-grid;
     @include color;
     
-    .container {
-      @include container;
+    #header {
+      @include header;
+    }
     
-      #intro {
-        @include intro;
-      }
+    #footer {
+      @include footer;
+    }
+    
+    #intro {
+      @include intro;
     }
   }
 }
