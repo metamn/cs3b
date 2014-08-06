@@ -6,5 +6,12 @@
   
   ul {
     padding-top: $gutter;
+    
+    li {
+      span {
+        text-decoration: underline;
+        line-height: 1.5;
+      }
+    }
   }
 }
