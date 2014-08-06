@@ -1,5 +1,5 @@
 /* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400|Nothing+You+Could+Do|Lato:300);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
 html { line-height: 1; }
@@ -17,18 +17,25 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; }
+/* Center vertically or horizontally
+- http://davidwalsh.name/css-vertical-center
+*/
+html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; font-family: "Vollkorn", serif; }
 @media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
 @media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
-html body .container { width: 100%; float: left; margin: 6.25em 6.45833em; width: calc(100% - 12.91667em); }
-@media only screen and (max-width: 30em) { html body .container { margin: 6.25em 1.25em; width: calc(100% - 2.5em); } }
-html body .container #intro { width: 100%; float: left; }
-html body .container #intro > h3 { display: none; }
-html body .container #intro #about { max-width: 31.25em; font-family: "Vollkorn", serif; }
-html body .container #intro #about > h3 { display: none; }
-html body .container #intro #about p + p { margin-top: 1.25em; }
-html body .container #intro #about p:first-of-type { font-size: 1.6154em; }
-html body .container #intro #about span { font-style: italic; color: #bd3028; background: white; }
+html body #header { padding: 2.5em 0; }
+html body #header h1 { width: 31.25em; display: inline-block; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; font-family: 'Nothing You Could Do', cursive; font-size: 1.6154em; }
+html body #footer { padding: 6.25em 0 1.25em; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; }
+html body #footer ul { padding-top: 1.25em; }
+html body #footer ul li span { text-decoration: underline; line-height: 1.5; }
+html body #intro { background: #f9f9f9; }
+html body #intro > h3 { display: none; }
+html body #intro article { padding: 6.25em 0 0; }
+html body #intro article h1 { top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); text-align: center; position: relative; max-width: 15.625em; font-family: 'Lato', sans-serif; font-size: 2.6154em; }
+html body #intro article nav { padding: 1.25em 0; }
+html body #intro article nav h3 { left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; display: inline-block; border: 2px solid; padding: 0.625em 1.25em; -webkit-border-radius: 0.625em; -moz-border-radius: 0.625em; -ms-border-radius: 0.625em; -o-border-radius: 0.625em; border-radius: 0.625em; }
+html body #intro article figure { left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; top: 2.5em; }
+html body #intro article figure img { max-width: 100%; }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }

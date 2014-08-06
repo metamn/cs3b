@@ -2,13 +2,18 @@ html {
   body {
     @include typographic-grid;
     @include color;
+    @include font;
     
-    .container {
-      @include container;
+    #header {
+      @include header;
+    }
     
-      #intro {
-        @include intro;
-      }
+    #footer {
+      @include footer;
+    }
+    
+    #intro {
+      @include intro;
     }
   }
 }
