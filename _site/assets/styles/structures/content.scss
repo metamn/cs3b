@@ -1,9 +1,10 @@
-@mixin intro {
+@mixin content {
   @include hide-title;
   background: #f9f9f9;
   
   article {
     padding: row(1) 0 0;
+    @include hide-title;
     
     h1 {
       @include center;
