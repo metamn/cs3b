@@ -3,6 +3,12 @@ layout: default
 title: Organized Crime and Corruption Reporting Project
 images:
   - desktop: occrp-desktop.png
+  - desktop: occrp-frontpage.png
+  - desktop: occrp-category.png
+  - desktop: occrp-slideshow.png
+  - desktop: occrp-news.png
+  - desktop: occrp-frontpage-bottom.png
+  - desktop: occrp-article.png
 services:
   - Responsive web design and development
 technologies:
@@ -13,6 +19,11 @@ technologies:
   - jQuery
   - Jekyll
 ---
+
+
+{% for image in page.images offset:1 %}
+{% include atoms/picture.html id=forloop.index %}
+{% endfor %}
 
 <!--
 <p>
