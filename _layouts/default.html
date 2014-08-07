@@ -4,10 +4,12 @@
 <section id="" class="content">
   <h3>{{ page.title }}</h3>
   
-  <article>
+  <article class="intro">
     <h1>{{ page.title }}</h1>
     
-    {% include responsive-images.html title="" normal="/assets/images/responsive-devices.png" mobile="/assets/images/responsive-devices.png" %}
+    <h3>{{ page.subtitle }}</h3>
+    
+    {% include atoms/picture.html title="" id="0" %}
   </article>
   
   <article>
