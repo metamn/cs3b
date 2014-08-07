@@ -7,11 +7,15 @@
   <article class="intro">
     <h1>{{ page.title }}</h1>
     
-    <aside>
-      <h3>{{ page.subtitle }}</h3>
-    </aside>
+    {% if page.subtitle %}
+      <aside>
+        <h3>{{ page.subtitle }}</h3>
+      </aside>
+    {% endif %}
     
-    {% include atoms/picture.html title="" id="0" %}
+    {% if page.images[0] %}
+      {% include atoms/picture.html id="0" %}
+    {% endif %}
   </article>
   
   <article class="body">
