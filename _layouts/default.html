@@ -7,12 +7,14 @@
   <article class="intro">
     <h1>{{ page.title }}</h1>
     
-    <h3>{{ page.subtitle }}</h3>
+    <aside>
+      <h3>{{ page.subtitle }}</h3>
+    </aside>
     
     {% include atoms/picture.html title="" id="0" %}
   </article>
   
-  <article>
+  <article class="body">
     <h3>Content</h3>
     
     {{ content }}
