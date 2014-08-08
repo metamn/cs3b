@@ -39,7 +39,7 @@ border: 2px solid;
 padding: $gutter/2 $gutter;
 @include border-radius($gutter/2);
 */ }
-html body .content article.intro figure { left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; top: 2.5em; }
+html body .content article.intro figure { left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; }
 html body .content article.intro figure img { max-width: 100%; }
 html body .content article.intro figure figcaption { display: none; }
 html body .content article.body { background: #f3f2f2; }
