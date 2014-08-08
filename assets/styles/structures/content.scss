@@ -42,14 +42,12 @@
   
   article.body {
     background: hsla(359, 5%, 95%, 1);
-    padding-left: col(2);
-    padding-right: col(1);
-    width: calc(100% - #{col(3)});
+    
     
     figure {
       @include figure;
       float: left;
-      padding: $gutter;
+      margin: $gutter;
     }
   }
 }

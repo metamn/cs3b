@@ -42,8 +42,8 @@ padding: $gutter/2 $gutter;
 html body .content article.intro figure { left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; top: 2.5em; }
 html body .content article.intro figure img { max-width: 100%; }
 html body .content article.intro figure figcaption { display: none; }
-html body .content article.body { background: #f3f2f2; padding-left: 12.91667em; padding-right: 6.45833em; width: calc(100% - 19.375em); }
-html body .content article.body figure { float: left; padding: 1.25em; }
+html body .content article.body { background: #f3f2f2; }
+html body .content article.body figure { float: left; margin: 1.25em; }
 html body .content article.body figure img { max-width: 100%; }
 html body .content article.body figure figcaption { display: none; }
 
