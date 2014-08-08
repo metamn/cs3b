@@ -1,0 +1,9 @@
+@mixin figure {
+  img {
+    max-width: 100%;
+  }
+  
+  figcaption {
+    display: none;
+  }
+}

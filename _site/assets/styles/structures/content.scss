@@ -1,10 +1,14 @@
 @mixin content {
   @include hide-title;
-  background: #f9f9f9;
+  
+  article {
+    @include block;
+    @include hide-title;
+    padding: row(1) 0 0;
+  }
   
   article.intro {
-    padding: row(1) 0 0;
-    @include hide-title;
+    background: lightblue;
     
     h1 {
       @include center;
@@ -16,31 +20,36 @@
     }
     
     aside {
-      padding: $gutter 0;
-      
       h3 {
         @include center(horizontal);
         position: relative;
-        
+        /*
         display: inline-block;
         border: 2px solid;
         padding: $gutter/2 $gutter;
         @include border-radius($gutter/2);
+        */
       }
     }
     
     figure {
+      @include figure;
       @include center(horizontal);
       position: relative;
       top: $gutter*2;
-      
-      img {
-        max-width: 100%;
-      }
     }
   }
   
   article.body {
-    @include hide-title;
+    background: hsla(359, 5%, 95%, 1);
+    padding-left: col(2);
+    padding-right: col(1);
+    width: calc(100% - #{col(3)});
+    
+    figure {
+      @include figure;
+      float: left;
+      padding: $gutter;
+    }
   }
 }
