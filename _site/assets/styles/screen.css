@@ -47,6 +47,7 @@ html body .content article.body { background: #f3f2f2; }
 html body .content article.body figure { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; }
 html body .content article.body figure img { max-width: 100%; }
 html body .content article.body figure figcaption { display: none; }
+html body .content article.body figure img { -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }
