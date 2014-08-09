@@ -7,16 +7,30 @@ images:
     tablet: occrp/occrp-mbp-tablet.png
     mobile: occrp/occrp-mbp-mobile.png
     title: OCCRP
-    class: mbp
+    classes: 
+      - mbp
   - desktop: occrp/occrp-frontpage.png
     desktop2x: occrp/occrp-frontpage-2x.png
     tablet: occrp/occrp-frontpage-mobile-2x.png
     mobile: occrp/occrp-frontpage-mobile.png
     title: OCCRP frontpage
-    class: screenshot
-  - desktop: occrp-frontpage-bottom.png
-  - desktop: occrp-slideshow.png
-  - desktop: occrp-mobile-category_iphone5s_silver_portrait.png
+    classes: 
+      - screenshot
+  - desktop: occrp/occrp-frontpage-bottom.png
+    title: A section from the OCCRP frontpage
+    classes: 
+      - screenshot
+      - half
+      - left
+  - desktop: occrp/occrp-investigations-right.png
+    title: A part of the Investigations screen
+    classes: 
+      - screenshot
+      - half
+      - right
+  - desktop: occrp/occrp-frontpage.png
+    classes: screenshot
+
   - desktop: occrp-tablet-original_ipadmini_white_portrait.png
   - desktop: occrp-tablet-original_ipadmini_white_angle1.png
 image2:
@@ -40,7 +54,7 @@ technologies:
 ---
 
 
-{% for image in page.images offset:1 limit: 1 %}
+{% for image in page.images offset:1 limit: 3 %}
   {% include atoms/picture.html id=forloop.index %}
 {% endfor %}
 
