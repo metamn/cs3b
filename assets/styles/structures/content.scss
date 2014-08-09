@@ -6,6 +6,10 @@
     @include block;
     @include hide-title;
     padding: row(1) 0 0;
+    
+    figure {
+      @include figure;
+    }
   }
   
   article.intro {
@@ -30,19 +34,9 @@
         */
       }
     }
-    
-    figure {
-      @include figure;
-      @include center(horizontal);
-    }
   }
   
   article.body {
     background: hsla(359, 5%, 95%, 1);
-    
-    
-    figure {
-      @include figure;
-    }
   }
 }
