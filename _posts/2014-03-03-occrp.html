@@ -14,7 +14,9 @@ images:
     mobile: occrp/occrp-frontpage-mobile.png
     title: OCCRP frontpage
     class: screenshot
-  - desktop: occrp-frontpage-bottom.png
+  - desktop: occrp/occrp-frontpage-bottom.png
+    title: A section from the OCCRP frontpage
+    class: screenshot
   - desktop: occrp-slideshow.png
   - desktop: occrp-mobile-category_iphone5s_silver_portrait.png
   - desktop: occrp-tablet-original_ipadmini_white_portrait.png
@@ -40,7 +42,7 @@ technologies:
 ---
 
 
-{% for image in page.images offset:1 limit: 1 %}
+{% for image in page.images offset:1 limit: 2 %}
   {% include atoms/picture.html id=forloop.index %}
 {% endfor %}
 
