@@ -6,4 +6,25 @@
   figcaption {
     display: none;
   }
+  
+  &.screenshot {
+    @include screenshot;
+  }
+}
+
+
+@mixin screenshot {
+  @include block;
+  @include center(horizontal);
+
+  img {
+    @include box-shadow(0px 1px 2px 0px rgba(50, 50, 50, 0.75));
+  } 
+  
+  max-width: 48em;
+  
+  @include below-tablet {
+    padding: 0 $gutter;
+    width: calc(100% - #{$gutter * 2});
+  }
 }
