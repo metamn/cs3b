@@ -102,4 +102,8 @@
     @include center(horizontal);
     max-width: 85%;
   }
+  
+  &.side {
+    max-width: 15em;
+  }
 }
