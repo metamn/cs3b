@@ -28,20 +28,13 @@ images:
       - screenshot
       - half
       - right
-  - desktop: occrp/occrp-frontpage.png
+  - desktop: occrp/occrp-slideshow.png
+    desktop2z: occrp/occrp-slideshow-2x.png
     classes: screenshot
-
-  - desktop: occrp-tablet-original_ipadmini_white_portrait.png
-  - desktop: occrp-tablet-original_ipadmini_white_angle1.png
-image2:
-  - desktop: occrp-desktop.png
-  - desktop: occrp-frontpage-full.png
-  - desktop: occrp-frontpage-bottom.png
-  - desktop: occrp-slideshow.png
-  - desktop: occrp-mobile-category_iphone5s_silver_portrait.png
-  - desktop: occrp-mobile-archive.png
-  - desktop: occrp-mobile-menu.png
-  - desktop: occrp-tablet-frontpage.png
+  - desktop: occrp/occrp-mobile-frontpage-iphone5.png
+    desktop2x: occrp/occrp-mobile-frontpage-iphone5-2x.png
+    title: the OCCRP frontpage on mobile
+    classes: iphone5
 services:
   - Responsive web design and development
 technologies:
@@ -54,7 +47,7 @@ technologies:
 ---
 
 
-{% for image in page.images offset:1 limit: 3 %}
+{% for image in page.images offset:1 %}
   {% include atoms/picture.html id=forloop.index %}
 {% endfor %}
 
