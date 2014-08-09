@@ -24,6 +24,10 @@
       @include half(24em);
     }
   }
+  
+  &.iphone5 {
+    @include iphone5;
+  }
 }
 
 
@@ -69,5 +73,17 @@
     float: right;
     clear: right;
     right: $margin;
+  }
+}
+
+
+@mixin iphone5 {
+  max-width: 20em;
+  clear: both;
+  
+  @include below-tablet {
+    @include block;
+    @include center(horizontal);
+    max-width: 50%;
   }
 }
