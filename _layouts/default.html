@@ -1,7 +1,29 @@
 {% include head.html %}
 {% include header.html %}
 
-{{ content }}
+<section id="" class="content">
+  <h3>{{ page.title }}</h3>
+  
+  <article class="intro">
+    <h1>{{ page.title }}</h1>
+    
+    {% if page.subtitle %}
+      <aside>
+        <h3>{{ page.subtitle }}</h3>
+      </aside>
+    {% endif %}
+    
+    {% if page.images[0] %}
+      {% include atoms/picture.html id="0" %}
+    {% endif %}
+  </article>
+  
+  <article class="body">
+    <h3>Content</h3>
+    
+    {{ content }}
+  </article>
+</section>
 
 {% include footer.html %}
 {% include scripts.html %}

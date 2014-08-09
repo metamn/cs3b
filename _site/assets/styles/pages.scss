@@ -12,8 +12,8 @@ html {
       @include footer;
     }
     
-    #intro {
-      @include intro;
+    .content {
+      @include content;
     }
   }
 }

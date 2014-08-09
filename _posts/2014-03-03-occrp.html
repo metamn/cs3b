@@ -1,8 +1,29 @@
 ---
-layout: client
+layout: default
 title: Organized Crime and Corruption Reporting Project
-categories:
-  - clients
+images:
+  - desktop: occrp-mbp.png
+  - desktop: occrp/occrp-frontpage.png
+    desktop2x: occrp/occrp-frontpage-2x.png
+    tablet: occrp/occrp-frontpage-mobile-2x.png
+    mobile: occrp/occrp-frontpage-mobile.png
+    title: OCCRP frontpage
+    figcaption: 
+    class: screenshot
+  - desktop: occrp-frontpage-bottom.png
+  - desktop: occrp-slideshow.png
+  - desktop: occrp-mobile-category_iphone5s_silver_portrait.png
+  - desktop: occrp-tablet-original_ipadmini_white_portrait.png
+  - desktop: occrp-tablet-original_ipadmini_white_angle1.png
+image2:
+  - desktop: occrp-desktop.png
+  - desktop: occrp-frontpage-full.png
+  - desktop: occrp-frontpage-bottom.png
+  - desktop: occrp-slideshow.png
+  - desktop: occrp-mobile-category_iphone5s_silver_portrait.png
+  - desktop: occrp-mobile-archive.png
+  - desktop: occrp-mobile-menu.png
+  - desktop: occrp-tablet-frontpage.png
 services:
   - Responsive web design and development
 technologies:
@@ -14,6 +35,12 @@ technologies:
   - Jekyll
 ---
 
+
+{% for image in page.images offset:1 limit: 1 %}
+  {% include atoms/picture.html id=forloop.index %}
+{% endfor %}
+
+<!--
 <p>
   The {{ page.title }} is an international organization investigating corruption worldwide.
 </p>
@@ -21,3 +48,4 @@ technologies:
 <p>
   Together we've redesigned their old website and made it responsive.
 </p>
+-->

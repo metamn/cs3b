@@ -1,41 +1,48 @@
-@mixin intro {
+@mixin content {
+  @include block;
   @include hide-title;
-  background: #f9f9f9;
   
   article {
+    @include block;
+    @include hide-title;
     padding: row(1) 0 0;
+  }
+  
+  article.intro {
+    background: lightblue;
     
     h1 {
       @include center;
-      position: relative;
       max-width: $text-width / 2;
       
       font-family: 'Lato', sans-serif;
       font-size: $heading-level-2;
     }
     
-    nav {
-      padding: $gutter 0;
-      
+    aside {
       h3 {
         @include center(horizontal);
-        position: relative;
-        
+        /*
         display: inline-block;
         border: 2px solid;
         padding: $gutter/2 $gutter;
         @include border-radius($gutter/2);
+        */
       }
     }
     
     figure {
+      @include figure;
       @include center(horizontal);
-      position: relative;
-      top: $gutter*2;
-      
-      img {
-        max-width: 100%;
-      }
+    }
+  }
+  
+  article.body {
+    background: hsla(359, 5%, 95%, 1);
+    
+    
+    figure {
+      @include figure;
     }
   }
 }

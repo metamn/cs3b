@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{% include atoms/classname.html title=page.title %} {{ page.layout }}">
   <head>
     <meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="author" href="humans.txt" />
     
     <title>{{ page.title | strip_html }}</title> 
     
@@ -13,11 +14,9 @@
     {% include ie.html %}
     
     <!-- Picturefill Responsive Images -->
-    <script type="text/javascript" src="{{ site.url }}/assets/scripts/matchmedia.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/assets/scripts/picturefill.js"></script>
+    <script async src="{{ site.url }}/assets/scripts/picturefill.min.js"></script>
   </head>
   
-  <body class="{{ page.title | downcase | remove:',' | remove:'&' | remove:"'" | remove: '"' | replace:' ', '-' }} {{ page.layout }}">
-  
+  <body>
     
     

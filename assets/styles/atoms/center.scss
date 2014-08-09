@@ -2,6 +2,8 @@
 - http://davidwalsh.name/css-vertical-center
 */
 @mixin center($direction: both) {
+  position: relative;
+  
   @if ($direction == vertical) {
     top: 50%;
     @include transform(translateY(-50%));
