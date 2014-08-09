@@ -28,6 +28,10 @@
   &.iphone5 {
     @include iphone5;
   }
+  
+  &.tablet {
+    @include ipadmini;
+  }
 }
 
 
@@ -85,5 +89,21 @@
     @include block;
     @include center(horizontal);
     max-width: 50%;
+  }
+}
+
+
+@mixin ipadmini {
+  max-width: 35em;
+  clear: both;
+  
+  @include below-tablet {
+    @include block;
+    @include center(horizontal);
+    max-width: 85%;
+  }
+  
+  &.side {
+    max-width: 15em;
   }
 }
