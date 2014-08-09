@@ -7,7 +7,7 @@
   
   {% assign title = image.title %}
   {% assign figcaption = image.figcaption %}
-  {% assign class = image.class %}
+  {% assign class = image.classes | join: ' ' %}
   {% assign desktop = image.desktop %}
   {% assign desktop2x = image.desktop2x %}
   {% assign tablet = image.tablet %}
@@ -16,7 +16,7 @@
 {% else %}
   {% assign title = include.title %}
   {% assign figcaption = include.figcaption %}
-  {% assign class = include.class %}
+  {% assign class = include.classes | join: ' ' %}
   {% assign desktop = include.desktop %}
   {% assign desktop2x = image.desktop2x %}
   {% assign tablet = include.tablet %}
