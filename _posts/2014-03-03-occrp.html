@@ -30,8 +30,8 @@ technologies:
 ---
 
 
-{% for image in page.images offset:1 %}
-{% include atoms/picture.html id=forloop.index %}
+{% for image in page.images offset:1 limit: 1%}
+  {% include atoms/picture.html id=forloop.index %}
 {% endfor %}
 
 <!--

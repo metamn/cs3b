@@ -1,4 +1,5 @@
 @mixin footer {
+  @include block;
   padding: row(1) 0 $gutter;
   
   @include center(horizontal);

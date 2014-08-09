@@ -1,4 +1,5 @@
 @mixin content {
+  @include block;
   @include hide-title;
   
   article {
@@ -12,7 +13,6 @@
     
     h1 {
       @include center;
-      position: relative;
       max-width: $text-width / 2;
       
       font-family: 'Lato', sans-serif;
@@ -22,7 +22,6 @@
     aside {
       h3 {
         @include center(horizontal);
-        position: relative;
         /*
         display: inline-block;
         border: 2px solid;
@@ -35,7 +34,6 @@
     figure {
       @include figure;
       @include center(horizontal);
-      position: relative;
     }
   }
   
@@ -44,9 +42,9 @@
     
     
     figure {
+      @include block;
       @include figure;
-      float: left;
-      margin: $gutter;
+      @include center(horizontal);
     }
   }
 }
