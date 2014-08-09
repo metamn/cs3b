@@ -32,6 +32,12 @@ html body .content { width: 100%; float: left; }
 html body .content > h3 { display: none; }
 html body .content article { width: 100%; float: left; padding: 6.25em 0 0; }
 html body .content article > h3 { display: none; }
+html body .content article figure img { max-width: 100%; }
+html body .content article figure figcaption { display: none; }
+html body .content article figure.mbp { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; }
+html body .content article figure.screenshot { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; }
+html body .content article figure.screenshot img { -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); }
+@media only screen and (max-width: 47.999em) { html body .content article figure.screenshot { padding: 0 1.25em; width: calc(100% - 2.5em); } }
 html body .content article.intro { background: lightblue; }
 html body .content article.intro h1 { position: relative; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); text-align: center; max-width: 15.625em; font-family: 'Lato', sans-serif; font-size: 2.6154em; }
 html body .content article.intro aside h3 { position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; /*
@@ -40,18 +46,7 @@ border: 2px solid;
 padding: $gutter/2 $gutter;
 @include border-radius($gutter/2);
 */ }
-html body .content article.intro figure { position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; }
-html body .content article.intro figure img { max-width: 100%; }
-html body .content article.intro figure figcaption { display: none; }
-html body .content article.intro figure.screenshot { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; }
-html body .content article.intro figure.screenshot img { -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); }
-@media only screen and (max-width: 47.999em) { html body .content article.intro figure.screenshot { padding: 0 1.25em; width: calc(100% - 2.5em); } }
 html body .content article.body { background: #f3f2f2; }
-html body .content article.body figure img { max-width: 100%; }
-html body .content article.body figure figcaption { display: none; }
-html body .content article.body figure.screenshot { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; }
-html body .content article.body figure.screenshot img { -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); }
-@media only screen and (max-width: 47.999em) { html body .content article.body figure.screenshot { padding: 0 1.25em; width: calc(100% - 2.5em); } }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }

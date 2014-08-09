@@ -7,9 +7,21 @@
     display: none;
   }
   
+  &.mbp {
+    @include mbp;
+  }
+  
   &.screenshot {
     @include screenshot;
   }
+}
+
+
+@mixin mbp {
+  @include block;
+  @include center(horizontal);
+  
+  max-width: 48em;
 }
 
 
