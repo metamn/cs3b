@@ -17,20 +17,18 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-/* Center vertically or horizontally
-- http://davidwalsh.name/css-vertical-center
+/* Center vertically or horizontally - the parent container must have the height set !!! - http://davidwalsh.name/css-vertical-center
 */
 html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; font-family: "Vollkorn", serif; }
 @media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
 @media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
-html body #header { width: 100%; float: left; padding: 2.5em 0; }
-html body #header h1 { width: 31.25em; display: inline-block; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; font-family: 'Nothing You Could Do', cursive; font-size: 1.6154em; }
-html body #footer { width: 100%; float: left; padding: 6.25em 0 1.25em; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; }
-html body #footer ul { padding-top: 1.25em; }
+html body #header { width: 100%; float: left; height: 6.25em; }
+html body #header h1 { width: 31.25em; display: inline-block; position: relative; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); text-align: center; font-family: 'Nothing You Could Do', cursive; font-size: 1.6154em; }
+html body #footer { width: 100%; float: left; height: 6.25em; padding: 6.25em 0; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; }
 html body #footer ul li span { text-decoration: underline; line-height: 1.5; }
 html body .content { width: 100%; float: left; }
 html body .content > h3 { display: none; }
-html body .content article { width: 100%; float: left; padding: 6.25em 0 0; }
+html body .content article { width: 100%; float: left; }
 html body .content article > h3 { display: none; }
 html body .content article figure img { max-width: 100%; }
 html body .content article figure figcaption { display: none; }
@@ -49,15 +47,10 @@ html body .content article figure.iphone5 { max-width: 20em; clear: both; }
 html body .content article figure.tablet { max-width: 35em; clear: both; }
 @media only screen and (max-width: 47.999em) { html body .content article figure.tablet { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 85%; } }
 html body .content article figure.tablet.side { max-width: 15em; }
-html body .content article.intro { background: lightblue; }
-html body .content article.intro h1 { position: relative; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); text-align: center; max-width: 15.625em; font-family: 'Lato', sans-serif; font-size: 2.6154em; }
-html body .content article.intro aside h3 { position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; /*
-display: inline-block;
-border: 2px solid;
-padding: $gutter/2 $gutter;
-@include border-radius($gutter/2);
-*/ }
-html body .content article.body { background: #f3f2f2; }
+html body .content article.intro { background: lightblue; height: 37.5em; padding-top: 6.25em; }
+html body .content article.intro h1 { max-width: 15.625em; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; font-family: 'Lato', sans-serif; font-size: 2.6154em; }
+html body .content article.intro figure { padding-top: 6.25em; }
+html body .content article.body { background: #f3f2f2; display: none; }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }
@@ -78,4 +71,4 @@ html body .content article.body { background: #f3f2f2; }
 #grid { z-index: 100; }
 #grid .col { color: red; }
 
-#gravity { display: none; }
+#grid, #gravity { display: none; }

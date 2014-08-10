@@ -1,6 +1,8 @@
 /* Center vertically or horizontally
-- http://davidwalsh.name/css-vertical-center
+  - the parent container must have the height set !!!
+  - http://davidwalsh.name/css-vertical-center
 */
+
 @mixin center($direction: both) {
   position: relative;
   
