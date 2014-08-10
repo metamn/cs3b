@@ -17,47 +17,42 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-/* Center vertically or horizontally
-- http://davidwalsh.name/css-vertical-center
+/* Center vertically or horizontally - the parent container must have the height set !!! - http://davidwalsh.name/css-vertical-center
 */
-html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; font-family: "Vollkorn", serif; }
+html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; font-family: "Vollkorn", serif; overflow-x: hidden; }
 @media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
 @media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
-html body #header { width: 100%; float: left; padding: 2.5em 0; }
-html body #header h1 { width: 31.25em; display: inline-block; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; font-family: 'Nothing You Could Do', cursive; font-size: 1.6154em; }
-html body #footer { width: 100%; float: left; padding: 6.25em 0 1.25em; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; position: relative; }
-html body #footer ul { padding-top: 1.25em; }
+html body #header { width: 100%; float: left; height: 6.25em; }
+html body #header h1 { width: 31.25em; display: inline-block; position: relative; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); text-align: center; font-family: 'Nothing You Could Do', cursive; font-size: 1.6154em; }
+html body #footer { width: 100%; float: left; height: 6.25em; padding: 6.25em 0; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; }
 html body #footer ul li span { text-decoration: underline; line-height: 1.5; }
 html body .content { width: 100%; float: left; }
 html body .content > h3 { display: none; }
-html body .content article { width: 100%; float: left; padding: 6.25em 0 0; }
+html body .content article { width: 100%; float: left; }
 html body .content article > h3 { display: none; }
+html body .content article figure { width: 100%; float: left; }
 html body .content article figure img { max-width: 100%; }
 html body .content article figure figcaption { display: none; }
-html body .content article figure.mbp { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; }
-html body .content article figure.screenshot { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; clear: both; }
+html body .content article figure.mbp { position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 48em; }
 html body .content article figure.screenshot img { -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75); }
-@media only screen and (max-width: 47.999em) { html body .content article figure.screenshot { padding: 0 1.25em; width: calc(100% - 2.5em); } }
-@media only screen and (min-width: 48em) and (max-width: 48em) { html body .content article figure.half { position: relative; top: auto; left: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); max-width: calc(20em - 0.625em); }
-  html body .content article figure.half.left { float: left; clear: left; left: calc(50% - 20em); }
-  html body .content article figure.half.right { float: right; clear: right; right: calc(50% - 20em); } }
-@media only screen and (min-width: 48.001em) { html body .content article figure.half { position: relative; top: auto; left: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); max-width: calc(24em - 0.625em); }
-  html body .content article figure.half.left { float: left; clear: left; left: calc(50% - 24em); }
-  html body .content article figure.half.right { float: right; clear: right; right: calc(50% - 24em); } }
-html body .content article figure.iphone5 { max-width: 20em; clear: both; }
-@media only screen and (max-width: 47.999em) { html body .content article figure.iphone5 { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 50%; } }
-html body .content article figure.tablet { max-width: 35em; clear: both; }
-@media only screen and (max-width: 47.999em) { html body .content article figure.tablet { width: 100%; float: left; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; max-width: 85%; } }
-html body .content article figure.tablet.side { max-width: 15em; }
-html body .content article.intro { background: lightblue; }
-html body .content article.intro h1 { position: relative; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); text-align: center; max-width: 15.625em; font-family: 'Lato', sans-serif; font-size: 2.6154em; }
-html body .content article.intro aside h3 { position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; /*
-display: inline-block;
-border: 2px solid;
-padding: $gutter/2 $gutter;
-@include border-radius($gutter/2);
-*/ }
-html body .content article.body { background: #f3f2f2; }
+html body .content article figure.side { max-width: 15em; }
+html body .content article figure.third { width: 30%; }
+html body .content article figure.third.left { margin-right: 5%; }
+html body .content article figure.half { width: 47.5%; }
+html body .content article figure.half.left { margin-right: 5%; }
+html body .content article figure.left { float: left; }
+html body .content article figure.right { float: right; }
+html body .content article.intro { background: lightblue; height: 37.5em; padding-top: 6.25em; }
+@media only screen and (max-width: 47.999em) { html body .content article.intro { height: 25em; } }
+html body .content article.intro h1 { max-width: 15.625em; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; font-family: 'Lato', sans-serif; font-size: 2.6154em; }
+html body .content article.intro figure { padding-top: 6.25em; }
+html body .content article.body { background: #f3f2f2; padding-top: 6.25em; }
+html body .content article.body .container { max-width: 48em; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; }
+@media only screen and (max-width: 48em) { html body .content article.body .container { padding: 0 1.25em; } }
+html body .content article.body .container figure { margin-bottom: 1.25em; }
+html body .content article.body .container aside { width: 47.5%; float: right; }
+html body .content article.body .container aside > h3 { display: none; }
+html body .content article.body .container aside.left { margin-right: 5%; }
 
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle { position: fixed; z-index: 1000; opacity: .3; }
 #gravity .h-vertical { left: calc(50% - 1px); height: 100%; border-left: 1px solid red; }
@@ -76,6 +71,6 @@ html body .content article.body { background: #f3f2f2; }
 #grid .gutter-bottom { float: left; border-bottom: 1px solid; height: calc(1.25em - 1px); width: 100%; }
 
 #grid { z-index: 100; }
-#grid .col { color: #fff; }
+#grid .col { color: red; }
 
 #grid, #gravity { display: none; }

@@ -5,7 +5,6 @@
   article {
     @include block;
     @include hide-title;
-    padding: row(1) 0 0;
     
     figure {
       @include figure;
@@ -15,28 +14,50 @@
   article.intro {
     background: lightblue;
     
+    height: row(6);
+    @include below-tablet {
+      height: row(4);
+    }
+    padding-top: row(1);
+    
+    
     h1 {
-      @include center;
       max-width: $text-width / 2;
+    
+      @include center(horizontal);
       
       font-family: 'Lato', sans-serif;
       font-size: $heading-level-2;
     }
     
-    aside {
-      h3 {
-        @include center(horizontal);
-        /*
-        display: inline-block;
-        border: 2px solid;
-        padding: $gutter/2 $gutter;
-        @include border-radius($gutter/2);
-        */
-      }
+    figure {
+      padding-top: row(1);
     }
   }
   
   article.body {
     background: hsla(359, 5%, 95%, 1);
+    padding-top: row(1);
+    
+    .container {
+      max-width: 48em;
+      @include center(horizontal);
+      
+      @include below-and-tablet {
+        padding: 0 $gutter;
+      }
+      
+      figure {
+        margin-bottom: $gutter;
+      }
+      
+      aside {
+        @include hide-title;
+        @include half;
+        float: right;
+      }
+    }
+    
+    
   }
 }

@@ -1,13 +1,12 @@
 @mixin footer {
   @include block;
-  padding: row(1) 0 $gutter;
+  height: row(1);
+  padding: row(1) 0;
+  
   
   @include center(horizontal);
-  position: relative;
   
   ul {
-    padding-top: $gutter;
-    
     li {
       span {
         text-decoration: underline;
