@@ -76,6 +76,6 @@ html body .content article.body { background: #f3f2f2; }
 #grid .gutter-bottom { float: left; border-bottom: 1px solid; height: calc(1.25em - 1px); width: 100%; }
 
 #grid { z-index: 100; }
-#grid .col { color: #fff; }
+#grid .col { color: red; }
 
-#grid, #gravity { display: none; }
+#gravity { display: none; }
