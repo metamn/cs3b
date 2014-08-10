@@ -13,8 +13,13 @@
   
   article.intro {
     background: lightblue;
+    
     height: row(6);
+    @include below-tablet {
+      height: row(4);
+    }
     padding-top: row(1);
+    
     
     h1 {
       max-width: $text-width / 2;
@@ -32,6 +37,27 @@
   
   article.body {
     background: hsla(359, 5%, 95%, 1);
-    display: none;
+    padding-top: row(1);
+    
+    .container {
+      max-width: 48em;
+      @include center(horizontal);
+      
+      @include below-tablet {
+        padding: 0 $gutter;
+      }
+      
+      figure {
+        margin-bottom: $gutter;
+      }
+      
+      aside {
+        @include hide-title;
+        @include half;
+        float: right;
+      }
+    }
+    
+    
   }
 }

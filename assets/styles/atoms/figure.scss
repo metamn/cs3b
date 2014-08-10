@@ -1,4 +1,6 @@
 @mixin figure {
+  @include block;
+  
   img {
     max-width: 100%;
   }
@@ -15,95 +17,57 @@
     @include screenshot;
   }
   
+  &.side {
+    @include side;
+  }
+  
+  &.third {
+    @include third;
+  }
+  
   &.half {
-    @include tablet-portrait {
-      @include half(20em);
-    }
+    @include half;
+  }
+  
+  &.left {
+    float: left;
+  }
+  
+  &.right {
+    float: right;
+  }
+}
+
+
+@mixin third {
+  width: 30%;
+  
+  &.left {
+    margin-right: 5%;
+  }
+}
+
+@mixin half {
+  width: 47.5%;
     
-    @include tablet-and-up {
-      @include half(24em);
-    }
-  }
-  
-  &.iphone5 {
-    @include iphone5;
-  }
-  
-  &.tablet {
-    @include ipadmini;
+  &.left {
+    margin-right: 5%;
   }
 }
 
 
 @mixin mbp {
-  @include block;
   @include center(horizontal);
-  
   max-width: 48em;
 }
 
 
 @mixin screenshot {
-  @include block;
-  @include center(horizontal);
-  
   img {
     @include box-shadow(0px 1px 2px 0px rgba(50, 50, 50, 0.75));
   } 
-  
-  max-width: 48em;
-  @include below-tablet {
-    padding: 0 $gutter;
-    width: calc(100% - #{$gutter * 2});
-  }
-
-  clear: both;
 }
 
-
-@mixin half($size) {
-  $width: calc(#{$size} - #{$gutter/2});
-  $margin: calc(50% - #{$size});
-
-  @include center(reset);
-  max-width: $width;
-  
-  &.left {
-    float: left;
-    clear: left;
-    left: $margin;
-  }
-  &.right {
-    float: right;
-    clear: right;
-    right: $margin;
-  }
-}
-
-
-@mixin iphone5 {
-  max-width: 20em;
-  clear: both;
-  
-  @include below-tablet {
-    @include block;
-    @include center(horizontal);
-    max-width: 50%;
-  }
-}
-
-
-@mixin ipadmini {
-  max-width: 35em;
-  clear: both;
-  
-  @include below-tablet {
-    @include block;
-    @include center(horizontal);
-    max-width: 85%;
-  }
-  
-  &.side {
-    max-width: 15em;
-  }
+@mixin side {
+  max-width: 15em;
 }
