@@ -3,6 +3,7 @@ html {
     @include typographic-grid;
     @include color;
     @include font;
+    overflow-x: hidden;
     
     #header {
       @include header;

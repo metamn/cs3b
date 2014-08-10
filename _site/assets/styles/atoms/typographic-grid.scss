@@ -18,18 +18,11 @@ $breakpoint-large-screen: 90em; // 1440px
   }
 }
 
-@mixin tablet-portrait {
-  @media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet) {
+@mixin below-and-tablet {
+  @media only screen and (max-width: $breakpoint-tablet) {
     @content
   }
 }
-
-@mixin tablet-and-up {
-  @media only screen and (min-width: $breakpoint-tablet + 0.001) {
-    @content
-  }
-}
-
 
 @mixin large-screen-and-up {
   @media only screen and (min-width: $breakpoint-large-screen + 0.001) {

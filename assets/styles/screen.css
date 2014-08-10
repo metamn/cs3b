@@ -19,7 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Center vertically or horizontally - the parent container must have the height set !!! - http://davidwalsh.name/css-vertical-center
 */
-html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; font-family: "Vollkorn", serif; }
+html body { font-size: 100%; line-height: 1.25; color: #0c0d0d; background: white; font-family: "Vollkorn", serif; overflow-x: hidden; }
 @media only screen and (max-width: 47.999em) { html body { font-size: 87.5%; } }
 @media only screen and (min-width: 90.001em) { html body { font-size: 125%; } }
 html body #header { width: 100%; float: left; height: 6.25em; }
@@ -48,7 +48,7 @@ html body .content article.intro h1 { max-width: 15.625em; position: relative; l
 html body .content article.intro figure { padding-top: 6.25em; }
 html body .content article.body { background: #f3f2f2; padding-top: 6.25em; }
 html body .content article.body .container { max-width: 48em; position: relative; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); text-align: center; }
-@media only screen and (max-width: 47.999em) { html body .content article.body .container { padding: 0 1.25em; } }
+@media only screen and (max-width: 48em) { html body .content article.body .container { padding: 0 1.25em; } }
 html body .content article.body .container figure { margin-bottom: 1.25em; }
 html body .content article.body .container aside { width: 47.5%; float: right; }
 html body .content article.body .container aside > h3 { display: none; }

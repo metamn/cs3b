@@ -43,7 +43,7 @@
       max-width: 48em;
       @include center(horizontal);
       
-      @include below-tablet {
+      @include below-and-tablet {
         padding: 0 $gutter;
       }
       
